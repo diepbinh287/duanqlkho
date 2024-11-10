@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+</head>
+<body>
+    <h1>Chi Tiết Sản Phẩm: {{ product.name }}</h1>
+    <p><strong>Mô tả:</strong> {{ product.description }}</p>
+    <p><strong>Giá:</strong> {{ product.price }}</p>
+    <p><strong>Số lượng trong kho:</strong> {{ product.quantity_in_stock }}</p>
+    <p><a href="{% url 'product_list' %}">Quay lại danh sách sản phẩm</a></p>
+</body>
+</html>

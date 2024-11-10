@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'test345/style.css'}">
+    <title>Nhập Kho</title>
+</head>
+<body>
+    <h1>Nhập Kho Sản Phẩm</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Lưu</button>
+    </form>
+    <a href="{% url 'stock_in_list' %}">Quay lại danh sách nhập kho</a>
+</body>
+</html>

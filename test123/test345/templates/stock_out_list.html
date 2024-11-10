@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Xuất Kho</title>
+</head>
+<body>
+    <h1>Danh Sách Xuất Kho</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Tổng giá trị</th>
+                <th>Ngày xuất</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in stock_out_items %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.unit_price }}</td>
+                <td>{{ item.total_price }}</td>
+                <td>{{ item.date_shipped }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Sản Phẩm</title>
+</head>
+<body>
+    <h1>Thêm Sản Phẩm Mới</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Lưu</button>
+    </form>
+    <a href="{% url 'product_list' %}">Quay lại danh sách sản phẩm</a>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Nhà Cung Cấp</title>
+</head>
+<body>
+    <h1>Danh Sách Nhà Cung Cấp</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tên Nhà Cung Cấp</th>
+                <th>Địa Chỉ</th>
+                <th>Số Điện Thoại</th>
+                <th>Email</th>
+                <th>Người Liên Hệ</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for supplier in suppliers %}
+            <tr>
+                <td>{{ supplier.name }}</td>
+                <td>{{ supplier.address }}</td>
+                <td>{{ supplier.phone_number }}</td>
+                <td>{{ supplier.email }}</td>
+                <td>{{ supplier.contact_person }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'add_supplier' %}">Thêm Nhà Cung Cấp</a>
+</body>
+</html>

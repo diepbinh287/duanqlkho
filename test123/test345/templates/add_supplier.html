@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Nhà Cung Cấp</title>
+</head>
+<body>
+    <h1>Thêm Nhà Cung Cấp Mới</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Lưu</button>
+    </form>
+    <a href="{% url 'supplier_list' %}">Quay lại danh sách nhà cung cấp</a>
+</body>
+</html>
